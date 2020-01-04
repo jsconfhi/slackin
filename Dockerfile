@@ -6,7 +6,8 @@ ADD . /srv/www
 
 WORKDIR /srv/www
 
-RUN npm install --unsafe-perm
+RUN npm install -g gulp
+RUN npm install 
 
 EXPOSE 3000
 
