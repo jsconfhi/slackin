@@ -1,4 +1,4 @@
-FROM node:slim
+FROM node:6.11.1
 
 ENV PORT 3000
 
@@ -8,6 +8,7 @@ WORKDIR /srv/www
 
 RUN npm install -g gulp
 RUN npm install 
+RUN npm run build
 
 EXPOSE 3000
 
