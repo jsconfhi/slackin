@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  slackin:
+    container_name: slackin
+    # logging:
+    #   driver: journald
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - ${PORT}:3000
