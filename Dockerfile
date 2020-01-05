@@ -1,4 +1,5 @@
-FROM node:6.11.1
+FROM node:8.12-alpine
+RUN apk add g++ make python
 
 ENV PORT 3000
 
