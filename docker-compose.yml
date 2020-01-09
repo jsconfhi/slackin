@@ -2,6 +2,7 @@ version: "3.7"
 services:
   slackin:
     container_name: slackin
+    restart: always
     logging:
       driver: journald
     build:
