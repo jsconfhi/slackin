@@ -1,3 +1,34 @@
+## JSConf Slackin Documentation
+Containerized version of the Slackin implementation to freeze Node version and little cleaner management of environment variables.
+
+Kind of hacky as image is not built and stored in a repository anywhere, just a simple deployable `docker-compose` environment if pulled from Github with minimal server setup/dependencies that will persist server restarts.
+
+Project can be run outside of Docker but doesn't look to be in active development and using deprecated Slack token method.
+
+#### Docker Development
+
+Prerequisites:
+
+* `docker`
+* `docker-compose`
+* `npm`
+  
+```
+npm run docker:dev
+```
+
+#### Docker Production
+Prerequisites:
+
+* `docker`
+* `docker-compose`
+
+```
+docker-compose up -d
+```
+
+## Slackin Upstream Documentation
+
 ![](https://github.com/zeit/art/blob/e081cf46e6609b51ac485dcc337ac6644c0da5e7/slackin/repo-banner.png)
 
 ## Features
