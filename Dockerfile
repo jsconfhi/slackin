@@ -1,4 +1,5 @@
-FROM node:slim
+FROM node:8.12-alpine
+RUN apk add g++ make python
 
 ENV PORT 3000
 
@@ -6,7 +7,9 @@ ADD . /srv/www
 
 WORKDIR /srv/www
 
-RUN npm install --unsafe-perm
+RUN npm install -g gulp
+RUN npm install 
+RUN npm run build
 
 EXPOSE 3000
 
